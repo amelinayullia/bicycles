@@ -1,0 +1,12 @@
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin title {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 30px;
+}
