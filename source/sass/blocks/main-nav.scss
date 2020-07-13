@@ -1,0 +1,128 @@
+.main-nav {
+  display: flex;
+  padding: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 256px;
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    @include list-reset;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+
+  @media (max-width: $bp-tablet) {
+    position: relative;
+    padding: 0;
+    margin-bottom: 135px;
+
+    .main-nav__toggle {
+      display: block;
+      position: absolute;
+      background: $vivid-cyan;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      padding: 0;
+      border: 0;
+      z-index: 5;
+      cursor: pointer;
+    }
+
+    &--closed .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 13px;
+      width: 25px;
+      height: 1px;
+      background-color: #222222;
+      box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+    }
+
+    &--opened .main-nav__toggle::before,
+    &--opened .main-nav__toggle::after {
+      content: "";
+      position: absolute;
+      right: 13px;
+      width: 25px;
+      height: 1px;
+      background-color: rgba(20, 21, 23, 0.2);
+    }
+
+    &--opened .main-nav__toggle::before {
+      transform: rotate(45deg);
+    }
+
+    &--opened .main-nav__toggle::after {
+      transform: rotate(-45deg);
+    }
+
+    &--opened .main-nav__toggle {
+      background: transparent;
+    }
+
+    &--closed .main-nav__list {
+      display: none;
+    }
+
+    &--opened {
+      background-color: $white;
+      z-index: 2;
+    }
+
+    &--opened .main-nav__list {
+      flex-direction: column;
+      justify-content: end;
+      min-height: 100vh;
+      color: $medium-gray;
+      margin-top: 70px;
+    }
+
+    .main-nav__list li {
+      padding: 16px;
+      background-color: #f6f6f6;
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.6px;
+    }
+
+    .main-nav__list a {
+      position: relative;
+      display: block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-top: 1px solid $medium-gray;
+        border-right: 1px solid $medium-gray;
+        width: 8px;
+        height: 8px;
+        top: 9px;
+        right: 10px;
+        transform: rotate(45deg);
+      }
+    }
+
+    &--nojs .main-nav__list {
+      min-height: 100%;
+    }
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+  }
+
+  @media (max-width: $bp-mobile) {
+    margin-bottom: 120px;
+  }
+}
