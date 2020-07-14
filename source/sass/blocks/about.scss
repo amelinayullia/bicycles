@@ -1,10 +1,10 @@
 .about {
-  margin-top: 390px;
-  margin-bottom: 130px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  min-height: 500px;
+  justify-content: center;
 
   .about__title {
     @include title;
@@ -12,6 +12,7 @@
     margin-bottom: 45px;
     line-height: 30px;
     padding-left: 18px;
+    padding-top: 10px;
   }
 
   .about__list {
@@ -47,8 +48,7 @@
   }
 
   @media (max-width: $bp-tablet) {
-    margin-top: 48px;
-    margin-bottom: 36px;
+    min-height: 425px;
 
     .about__title {
       margin-bottom: 25px;

@@ -3,7 +3,6 @@
   padding: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 256px;
 
   .main-nav__toggle {
     display: none;
@@ -28,7 +27,6 @@
   @media (max-width: $bp-tablet) {
     position: relative;
     padding: 0;
-    margin-bottom: 135px;
 
     .main-nav__toggle {
       display: block;
@@ -127,9 +125,5 @@
     &--nojs .main-nav__toggle {
       display: none;
     }
-  }
-
-  @media (max-width: $bp-mobile) {
-    margin-bottom: 120px;
   }
 }

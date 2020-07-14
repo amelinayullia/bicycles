@@ -3,23 +3,8 @@
   max-width: 875px;
   position: relative;
 
-  .header__logo {
-    position: absolute;
-    top: 318px;
-    left: 0;
-  }
-
   @media (max-width: $bp-tablet) {
     margin: 0;
     max-width: 100%;
-
-    .header__logo {
-      top: 25px;
-      left: 20px;
-
-      &--nojs {
-        top: 500px;
-      }
-    }
   }
 }
