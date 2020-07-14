@@ -80,7 +80,7 @@
     .intro__form input,
     .intro__form button {
       margin-top: 0;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .intro__form input {
@@ -110,6 +110,10 @@
 
   @media (max-width: $bp-mobile) {
     padding: 0 15px;
+
+    .intro__inner {
+      max-width: 300px;
+    }
 
     .intro__inner p {
       font-size: 18px;
