@@ -11,6 +11,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 2;
+  position: relative;
 }
 
 img {
@@ -26,40 +27,4 @@ a {
 
 .overflowed {
   overflow: hidden;
-}
-
-.main {
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/img-bike@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 825px;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  @media (max-width: $bp-tablet) {
-    &--nojs {
-      &::before {
-        top: 480px;
-      }
-    }
-
-    &::before {
-      background-image: url("../img/img-bike-tablet@1x.png");
-      height: 340px;
-    }
-  }
-
-  @media (max-width: $bp-mobile) {
-    &::before {
-      background-image: url("../img/img-bike-mobile@1x.png");
-      height: 390px;
-    }
-  }
 }

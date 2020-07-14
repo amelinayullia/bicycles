@@ -13,9 +13,16 @@
     @include list-reset;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     font-weight: 300;
     opacity: 0.7;
+  }
+
+  .main-nav__list li {
+    &:hover {
+      color: $vivid-cyan;
+    }
   }
 
   @media (max-width: $bp-tablet) {
@@ -43,8 +50,8 @@
       right: 13px;
       width: 25px;
       height: 1px;
-      background-color: #222222;
-      box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+      background-color: $very-dark-gray;
+      box-shadow: 0 8px 0 0 $very-dark-gray, 0 16px 0 0 $very-dark-gray;
     }
 
     &--opened .main-nav__toggle::before,
@@ -88,7 +95,7 @@
 
     .main-nav__list li {
       padding: 16px;
-      background-color: #f6f6f6;
+      background-color: $very-light-gray;
       margin-top: 30px;
       font-size: 20px;
       font-weight: 400;
