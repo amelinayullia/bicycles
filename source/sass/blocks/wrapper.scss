@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  background-image: url("../img/img-bike@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $very-dark-gray;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/img-bike@2x.png");
+  }
+
+  @media (max-width: $bp-tablet) {
+    background: none;
+  }
+}
