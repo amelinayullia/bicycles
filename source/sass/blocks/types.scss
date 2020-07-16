@@ -127,6 +127,8 @@
       &:nth-child(3n) {
         margin: 0;
         margin-bottom: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
       }
 
       &:nth-child(1) {
@@ -161,7 +163,7 @@
   @media (max-width: $bp-mobile) {
     min-height: 1320px;
     padding: 0 25px;
-    margin-top: 43px;
+    margin-top: 46px;
 
     ul {
       padding: 0;
@@ -172,6 +174,8 @@
       &:nth-child(2n),
       &:nth-child(3n) {
         margin-bottom: 42px;
+        margin-right: 0;
+        margin-left: 0;
       }
 
       &:nth-child(1) {

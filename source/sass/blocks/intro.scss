@@ -172,8 +172,8 @@
 
   @media (max-width: $bp-mobile) {
     .intro__logo {
-      top: 20px;
-      left: 20px;
+      top: 24px;
+      left: 17px;
     }
 
     .intro__inner {
@@ -189,12 +189,18 @@
       }
     }
 
+    .intro__inner h2 {
+      margin-top: 120px;
+    }
+
     .intro__form p {
       margin-bottom: 20px;
+      letter-spacing: 0.3px;
     }
 
     .intro__form {
-      padding: 0 15px;
+      padding: 0 17px;
+      margin-top: 14px;
     }
   }
 }

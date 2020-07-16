@@ -83,7 +83,7 @@
   }
 
   @media (max-width: $bp-mobile) {
-    margin-top: 70px;
+    margin-top: 50px;
 
     .about__list p {
       font-size: 18px;
@@ -92,9 +92,11 @@
     .about__list li {
       padding: 0;
       margin-bottom: 53px;
+      margin-right: 0;
+      margin-left: 0;
 
       &:nth-child(1) {
-        margin-bottom: 30px;
+        margin-bottom: 32px;
       }
     }
 
