@@ -1,11 +1,49 @@
 .video {
   background-color: $very-dark-blue;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   min-height: 706px;
+
+  button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: $vivid-cyan;
+    top: 510px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2) translateX(-50%);
+      background-color: lighten($vivid-cyan, 10);
+    }
+
+    &:active {
+      background: $vivid-cyan;
+      background-color: darken($vivid-cyan, 10);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9px 0 9px 13px;
+      border-color: transparent transparent transparent $very-dark-gray;
+      transform: translate(-50%, -50%);
+    }
+  }
 
   h2 {
     @include title;
@@ -29,29 +67,6 @@
     top: 285px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background: $vivid-cyan;
-    top: 510px;
-    z-index: 2;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 535px;
-    z-index: 3;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 9px 0 9px 13px;
-    border-color: transparent transparent transparent $very-dark-gray;
-  }
-
   @media (max-width: $bp-tablet) {
     min-height: 413px;
 
@@ -70,15 +85,10 @@
       width: 503px;
     }
 
-    &::before {
+    button {
       width: 91px;
       height: 91px;
       top: 310px;
-    }
-
-    &::after {
-      top: 344px;
-      border-width: 12px 0 12px 18px;
     }
   }
 
@@ -95,14 +105,14 @@
       width: 288px;
     }
 
-    &::before {
+    button {
       width: 65px;
       height: 65px;
       top: 320px;
-    }
 
-    &::after {
-      border-width: 9px 0 9px 13px;
+      &::after {
+        border-width: 9px 0 9px 13px;
+      }
     }
   }
 }
