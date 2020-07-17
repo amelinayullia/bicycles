@@ -4,42 +4,9 @@
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__list {
-    @include list-reset;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    font-weight: 300;
-    opacity: 0.7;
-  }
-
-  .main-nav__list li {
-    &:hover {
-      color: $vivid-cyan;
-    }
-  }
-
   @media (max-width: $bp-tablet) {
     position: relative;
     padding: 0;
-
-    .main-nav__toggle {
-      display: block;
-      position: absolute;
-      background: $vivid-cyan;
-      width: 50px;
-      height: 50px;
-      right: 0;
-      padding: 0;
-      border: 0;
-      z-index: 5;
-      cursor: pointer;
-    }
 
     &--closed .main-nav__toggle::before {
       content: "";
@@ -91,7 +58,48 @@
       margin-top: 70px;
     }
 
-    .main-nav__list li {
+    &--nojs .main-nav__list {
+      min-height: 100%;
+    }
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+
+  @media (max-width: $bp-tablet) {
+    display: block;
+    position: absolute;
+    background: $vivid-cyan;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    padding: 0;
+    border: 0;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  font-weight: 300;
+  opacity: 0.7;
+
+  li:hover {
+    color: $vivid-cyan;
+  }
+
+  @media (max-width: $bp-tablet) {
+    li {
       padding: 16px;
       background-color: $very-light-gray;
       margin-top: 30px;
@@ -99,31 +107,19 @@
       font-weight: 400;
       line-height: 28px;
       letter-spacing: 0.6px;
-    }
-
-    .main-nav__list a {
       position: relative;
-      display: block;
-
-      &::after {
-        content: "";
-        position: absolute;
-        border-top: 1px solid $medium-gray;
-        border-right: 1px solid $medium-gray;
-        width: 8px;
-        height: 8px;
-        top: 9px;
-        right: 10px;
-        transform: rotate(45deg);
-      }
     }
 
-    &--nojs .main-nav__list {
-      min-height: 100%;
-    }
-
-    &--nojs .main-nav__toggle {
-      display: none;
+    a::after {
+      content: "";
+      position: absolute;
+      border-top: 1px solid $medium-gray;
+      border-right: 1px solid $medium-gray;
+      width: 8px;
+      height: 8px;
+      top: 25px;
+      right: 26px;
+      transform: rotate(45deg);
     }
   }
 }

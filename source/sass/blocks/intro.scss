@@ -6,23 +6,38 @@
   align-items: center;
   position: relative;
 
-  .intro__inner {
-    max-width: 393px;
-    position: relative;
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+    justify-content: initial;
+    min-height: 738px;
+    padding: 0;
+
+    &--nojs .intro__inner {
+      top: 0;
+    }
+
+    &--nojs .intro__form {
+      margin-top: 70px;
+    }
   }
+}
+
+.intro__inner {
+  max-width: 393px;
+  position: relative;
 
   .intro__logo {
     position: absolute;
     top: 15px;
     left: 0;
-
-    svg {
-      width: 68px;
-      height: 21px;
-    }
   }
 
-  .intro__inner h2 {
+  svg {
+    width: 68px;
+    height: 21px;
+  }
+
+  h2 {
     font-size: 46px;
     line-height: 64px;
     margin-top: 65px;
@@ -30,7 +45,7 @@
     letter-spacing: 2px;
   }
 
-  .intro__inner p {
+  p {
     margin: 0;
     font-size: 20px;
     font-weight: 300;
@@ -38,27 +53,90 @@
     opacity: 0.8;
   }
 
-  .intro__form {
-    margin-left: 160px;
-    max-width: 330px;
-    padding-top: 22px;
+  @media (max-width: $bp-tablet) {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 68px;
+    background-image: url("../img/img-bike-tablet@1x.png");
+    min-height: 340px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $very-dark-gray;
+    width: 100%;
+    top: -69px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/img-bike-tablet@2x.png");
+    }
+
+    .intro__logo {
+      left: 20px;
+      top: 25px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 42px;
+      margin-top: 135px;
+      margin-bottom: 20px;
+      letter-spacing: 0.9px;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 435px;
+      margin: 0 auto;
+      letter-spacing: 0.3px;
+    }
   }
 
-  .intro__form p {
+  @media (max-width: $bp-mobile) {
+    margin-top: 55px;
+    padding: 0 15px;
+    background-image: url("../img/img-bike-mobile@1x.png");
+    min-height: 390px;
+    top: -56px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/img-bike-mobile@2x.png");
+    }
+
+    .intro__logo {
+      top: 24px;
+      left: 17px;
+    }
+
+    h2 {
+      margin-top: 120px;
+    }
+  }
+}
+
+.intro__form {
+  margin-left: 160px;
+  max-width: 330px;
+  padding-top: 22px;
+
+  p {
     font-weight: 600;
     font-size: 17px;
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.3px;
+    margin: 0;
   }
 
-  .intro__form input,
-  .intro__form button {
+  input,
+  button {
     margin-top: 20px;
     width: 100%;
   }
 
-  .intro__form input {
+  input {
     padding: 12px 30px;
     border: none;
     box-shadow: 0 0 0 1px $grayish-blue;
@@ -73,12 +151,7 @@
     }
   }
 
-  .intro__inner,
-  .intro__form p {
-    margin: 0;
-  }
-
-  .intro__form button {
+  button {
     background: $vivid-cyan;
     border-radius: 6px;
     font-weight: 600;
@@ -94,79 +167,21 @@
   }
 
   @media (max-width: $bp-tablet) {
-    flex-direction: column;
-    justify-content: initial;
-    min-height: 738px;
+    max-width: 321px;
+    margin-left: 0;
     padding: 0;
 
-    &--nojs {
-      &::before {
-        top: 480px;
-      }
-    }
-
-    .intro__logo {
-      left: 20px;
-      top: 25px;
-    }
-
-    .intro__form {
-      max-width: 321px;
-      margin-left: 0;
-      padding: 0;
-    }
-
-    .intro__form input,
-    .intro__form button {
+    input,
+    button {
       margin-top: 0;
       margin-bottom: 20px;
     }
 
-    .intro__form input {
+    input {
       padding: 12px 25px;
     }
 
-    .intro__inner {
-      max-width: 100%;
-      text-align: center;
-      margin-top: 68px;
-      background-image: url("../img/img-bike-tablet@1x.png");
-      min-height: 340px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-color: $very-dark-gray;
-      width: 100%;
-      top: -69px;
-      left: 0;
-      bottom: 0;
-      z-index: -1;
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/img-bike-tablet@2x.png");
-      }
-
-      &--nojs {
-        top: 500px;
-      }
-    }
-
-    .intro__inner h2 {
-      font-size: 30px;
-      line-height: 42px;
-      margin-top: 135px;
-      margin-bottom: 20px;
-      letter-spacing: 0.9px;
-    }
-
-    .intro__inner p {
-      font-size: 18px;
-      max-width: 435px;
-      margin: 0 auto;
-      letter-spacing: 0.3px;
-    }
-
-    .intro__form p {
+    p {
       font-weight: 600;
       font-size: 18px;
       color: $black;
@@ -176,36 +191,12 @@
   }
 
   @media (max-width: $bp-mobile) {
-    .intro__logo {
-      top: 24px;
-      left: 17px;
-    }
+    padding: 0 17px;
+    margin-top: 14px;
 
-    .intro__inner {
-      margin-top: 55px;
-      padding: 0 15px;
-
-      background-image: url("../img/img-bike-mobile@1x.png");
-      min-height: 390px;
-      top: -56px;
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/img-bike-mobile@2x.png");
-      }
-    }
-
-    .intro__inner h2 {
-      margin-top: 120px;
-    }
-
-    .intro__form p {
+    p {
       margin-bottom: 20px;
       letter-spacing: 0.3px;
-    }
-
-    .intro__form {
-      padding: 0 17px;
-      margin-top: 14px;
     }
   }
 }
