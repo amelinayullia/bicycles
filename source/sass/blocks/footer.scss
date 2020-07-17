@@ -26,12 +26,21 @@
     padding-left: 15px;
     line-height: 22px;
     vertical-align: top;
+
+    &:hover {
+      color: $vivid-cyan;
+    }
   }
 
   svg {
     width: 26px;
     height: 24px;
     fill: transparent;
+
+    &:hover {
+      stroke: $vivid-cyan;
+      fill: $vivid-cyan;
+    }
   }
 
   @media (max-width: $bp-tablet) {
