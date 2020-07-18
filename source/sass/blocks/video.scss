@@ -50,14 +50,17 @@
 .video__inner {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
   margin-top: 56px;
   height: 420px;
 
   picture {
     position: absolute;
+    width: 922px;
     top: 0;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   a {
