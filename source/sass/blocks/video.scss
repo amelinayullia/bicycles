@@ -7,7 +7,7 @@
   position: relative;
   min-height: 706px;
 
-  button {
+  a {
     position: absolute;
     width: 65px;
     height: 65px;
@@ -15,20 +15,22 @@
     background: $vivid-cyan;
     top: 510px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
+    transform-origin: left;
     z-index: 2;
     border: 0;
     transition: all 0.3s;
     cursor: pointer;
 
     &:hover {
-      transform: scale(1.2) translateX(-50%);
-      background-color: lighten($vivid-cyan, 10);
+      transform: scale(1.2) translate(-50%);
+      background-color: lighten($vivid-cyan, 25);
     }
 
     &:active {
+      transform: scale(1) translate(-50%);
       background: $vivid-cyan;
-      background-color: darken($vivid-cyan, 10);
+      background-color: darken($vivid-cyan, 15);
     }
 
     &::after {
@@ -85,7 +87,7 @@
       width: 503px;
     }
 
-    button {
+    a {
       width: 91px;
       height: 91px;
       top: 310px;
@@ -105,7 +107,7 @@
       width: 288px;
     }
 
-    button {
+    a {
       width: 65px;
       height: 65px;
       top: 320px;
