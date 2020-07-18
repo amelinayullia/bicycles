@@ -145,25 +145,28 @@
       <article class="video container" id="video">
         <h2>Видео про велосипеды</h2>
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-        <picture>
-          <source type="image/webp" media="(min-width: 1024px)" srcset="./img/img-video-bike@1x.webp, ./img/img-video-bike@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="./img/img-video-bike-tablet@1x.webp, ./img/img-video-bike-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="./img/img/img-video-bike-mobile@1x.webp, ./img/img-video-bike-mobile@2x.webp 2x">
-          <source media="(min-width: 1024px)" srcset="./img/img-video-bike@1x.png, ./img/img-video-bike@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="./img/img-video-bike-tablet@1x.png, ./img/img-video-bike-tablet@2x.png 2x">
-          <img src="./img/img-video-bike-mobile@1x.png" srcset="./img/img-video-bike-mobile@2x.png 2x" width="288" height="162" alt="Видео про велосипеды">
-        </picture>
 
-        <a href="#">
-          <span class="visually-hidden">Воспроизвести видео ролик о велосипедах</span>
-        </a>
+        <div class="video__inner">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="./img/img-video-bike@1x.webp, ./img/img-video-bike@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/img-video-bike-tablet@1x.webp, ./img/img-video-bike-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/img/img-video-bike-mobile@1x.webp, ./img/img-video-bike-mobile@2x.webp 2x">
+            <source media="(min-width: 1024px)" srcset="./img/img-video-bike@1x.png, ./img/img-video-bike@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/img-video-bike-tablet@1x.png, ./img/img-video-bike-tablet@2x.png 2x">
+            <img src="./img/img-video-bike-mobile@1x.png" srcset="./img/img-video-bike-mobile@2x.png 2x" width="288" height="162" alt="Видео про велосипеды">
+          </picture>
+
+          <a href="#">
+            <span class="visually-hidden">Воспроизвести видео ролик о велосипедах</span>
+          </a>
+        </div>
       </article>
 
       <section class="contacts" id="contacts">
         <h2>Как нас найти?</h2>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         <div class="contacts__map-wrapper contacts__map-wrapper--nojs">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123563!2d30.320894615473787!3d59.938796869048616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1595069573342!5m2!1sru!2sua" width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123563!2d30.320894615473787!3d59.938796869048616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1595069573342!5m2!1sru!2sua" width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0">
           </iframe>
 
           <picture>
@@ -195,7 +198,8 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
 
   </body>
 
