@@ -2,6 +2,7 @@
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  height: 1px;
   min-height: 760px;
   align-items: center;
   position: relative;
@@ -9,6 +10,7 @@
   @media (max-width: $bp-tablet) {
     flex-direction: column;
     justify-content: initial;
+    height: auto;
     min-height: 738px;
     padding: 0;
 
