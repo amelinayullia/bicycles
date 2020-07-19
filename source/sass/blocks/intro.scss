@@ -141,6 +141,7 @@
   input {
     padding: 12px 30px;
     border: none;
+    outline: none;
     box-shadow: 0 0 0 1px $grayish-blue;
     border-radius: 4px;
     flex-grow: 1;
@@ -150,6 +151,10 @@
 
     &:hover {
       box-shadow: 0 0 0 3px $vivid-cyan;
+    }
+
+    &:focus:invalid {
+      box-shadow: 0 0 0 3px $light-vivid-cyan;
     }
   }
 
@@ -166,6 +171,10 @@
     &:hover {
       background-color: darken($vivid-cyan, 10);
     }
+  }
+
+  .error:not(.hackselector) {
+    box-shadow: 0 0 0 2px red;
   }
 
   @media (max-width: $bp-tablet) {
