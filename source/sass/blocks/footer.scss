@@ -15,8 +15,10 @@
 
 .footer__inner {
   display: block;
-  padding-left: 420px;
+  padding-left: 93px;
   color: $black;
+  margin: 0 auto;
+  max-width: 750px;
 
   a {
     opacity: 0.5;
