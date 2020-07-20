@@ -10,6 +10,10 @@
     z-index: 1;
   }
 
+  img {
+    border-radius: 10px;
+  }
+
   h2 {
     @include title;
     color: $very-dark-gray;
@@ -21,6 +25,7 @@
   ul {
     @include list-reset;
     display: flex;
+    flex-wrap: wrap;
     margin-left: 20px;
     margin-top: 50px;
     padding: 0 60px;
@@ -37,8 +42,8 @@
     line-height: 34px;
     position: relative;
 
-    &:nth-child(1),
-    &:nth-child(2n),
+    &:nth-child(3n+1),
+    &:nth-child(3n+2),
     &:nth-child(3n) {
       &::before,
       &::after {
@@ -47,7 +52,7 @@
       }
     }
 
-    &:nth-child(1) {
+    &:nth-child(3n+1) {
       margin-top: 10px;
 
       &::before {
@@ -61,7 +66,7 @@
       }
     }
 
-    &:nth-child(2n) {
+    &:nth-child(3n+2) {
       margin-top: 40px;
 
       &::before,
@@ -127,8 +132,8 @@
     }
 
     li {
-      &:nth-child(1),
-      &:nth-child(2n),
+      &:nth-child(3n+1),
+      &:nth-child(3n+2),
       &:nth-child(3n) {
         margin: 0;
         margin-bottom: 50px;
@@ -136,7 +141,7 @@
         margin-left: 10px;
       }
 
-      &:nth-child(1) {
+      &:nth-child(3n+1) {
         &::before {
           width: 127px;
           height: 127px;
@@ -146,7 +151,7 @@
         }
       }
 
-      &:nth-child(2n) {
+      &:nth-child(3n+2) {
         &::before,
         &::after {
           border: none;
@@ -176,19 +181,18 @@
     }
 
     li {
-      &:nth-child(1),
-      &:nth-child(2n),
+      &:nth-child(3n+1),
+      &:nth-child(3n+2),
       &:nth-child(3n) {
         margin-bottom: 42px;
         margin-right: 0;
         margin-left: 0;
       }
 
-      &:nth-child(1) {
+      &:nth-child(3n+1) {
         &::before {
           top: 200px;
           left: -25px;
-          z-index: -1;
         }
       }
 
