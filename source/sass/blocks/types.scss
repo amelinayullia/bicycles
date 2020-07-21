@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 100%;
+  overflow-x: hidden;
 
   picture {
     z-index: 1;
@@ -26,9 +27,12 @@
     @include list-reset;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20px;
+    justify-content: space-between;
     margin-top: 50px;
-    padding: 0 60px;
+    margin-left: 20px;
+    padding: 0;
+    max-width: 1126px;
+    width: 100%;
   }
 
   li {
@@ -41,9 +45,11 @@
     font-size: 22px;
     line-height: 34px;
     position: relative;
+    flex-basis: 270px;
+    flex-grow: 1;
 
-    &:nth-child(3n+1),
-    &:nth-child(3n+2),
+    &:nth-child(3n + 1),
+    &:nth-child(3n + 2),
     &:nth-child(3n) {
       &::before,
       &::after {
@@ -52,7 +58,7 @@
       }
     }
 
-    &:nth-child(3n+1) {
+    &:nth-child(3n + 1) {
       margin-top: 10px;
 
       &::before {
@@ -66,7 +72,7 @@
       }
     }
 
-    &:nth-child(3n+2) {
+    &:nth-child(3n + 2) {
       margin-top: 40px;
 
       &::before,
@@ -132,8 +138,10 @@
     }
 
     li {
-      &:nth-child(3n+1),
-      &:nth-child(3n+2),
+      flex-grow: 0;
+
+      &:nth-child(3n + 1),
+      &:nth-child(3n + 2),
       &:nth-child(3n) {
         margin: 0;
         margin-bottom: 50px;
@@ -141,7 +149,7 @@
         margin-left: 10px;
       }
 
-      &:nth-child(3n+1) {
+      &:nth-child(3n + 1) {
         &::before {
           width: 127px;
           height: 127px;
@@ -151,7 +159,7 @@
         }
       }
 
-      &:nth-child(3n+2) {
+      &:nth-child(3n + 2) {
         &::before,
         &::after {
           border: none;
@@ -178,18 +186,19 @@
     ul {
       padding: 0;
       flex-direction: column;
+      align-items: center;
     }
 
     li {
-      &:nth-child(3n+1),
-      &:nth-child(3n+2),
+      &:nth-child(3n + 1),
+      &:nth-child(3n + 2),
       &:nth-child(3n) {
         margin-bottom: 42px;
         margin-right: 0;
         margin-left: 0;
       }
 
-      &:nth-child(3n+1) {
+      &:nth-child(3n + 1) {
         &::before {
           top: 200px;
           left: -25px;
